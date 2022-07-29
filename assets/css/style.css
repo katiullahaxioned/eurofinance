@@ -89,6 +89,7 @@ body {
 
 a { 
   display: inline-block;
+  transition: all .3s;
   text-decoration: none; 
 }
 
@@ -97,20 +98,181 @@ li {
   list-style-type: none;
 }
 
+/* for all */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --clr-grey: #808080;
+  --clr-black: #000;
+  --clr-white: #fff;
+  --clr-blue1: #2ebcf0;
+  --clr-blue2: #269fe3;
+  --clr-blue3: #249adf;
+  --clr-blue4: #1c7cc4;
+  --clr-blue5: #135ba5;
+  --clr-blue6: #1b3568;
+  --clr-blue7: #16274f;
+  --clr-facebook: #4267b2;
+  --clr-linkedin: #0077b5;
+  --clr-twitter: #1da1f2;
+  --clr-youtube: #ff0000;
+}
+
+span {
+  display: inline-block;
+}
+
+input[type],
+textarea,
+button {
+  border: none;
+  display: inline-block;
+  outline: none;
+}
+
+::first-letter {
+  text-transform: uppercase;
+}
+
+::placeholder {
+  color: var(--clr-grey);
+  font-size: 10px;
+  text-transform: capitalize;
+}
+
 /*for wrapper*/
 .wrapper {
   max-width: 1360px;
-  width: 86%; 
+  width: 70.5%; 
   margin: 0 auto;
 }
 /*=================================
   Header styling starts here
 =================================*/
 
+header {
+  position: relative;
+}
 
+.header-top {
+  background: linear-gradient(to right, var(--clr-blue5), var(--clr-blue6));
+}
 
+.header-top .wrapper {
+  padding: 28px 0 41px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.header-top form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.header-top .input-group input {
+  width: 167px;
+  padding: 6px 5px 6px 12px;
+  border-top: 1px solid var(--clr-blue2);
+  background-color: var(--clr-white);
+}
+
+.header-top .input-control input {
+  padding: 8px 14px 8px;
+  transition: all .3s;
+  background-color: var(--clr-blue2) ;
+  color: var(--clr-white);
+  font-size: 11px;
+  text-transform: capitalize;
+}
+
+.header-top .input-control input:hover {
+  background-color: var(--clr-blue4);
+}
+
+/* menu toggle start */
+
+.menu-toggle {
+  width: 32px;
+  height: 32px;
+  display: none;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  position: relative;
+  transition: all .3s;
+  background-color: var(--clr-blue7);
+  text-indent: -99999px;
+}
+
+.bar::before,
+.bar::after {
+  content: '';
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  position: absolute;
+  left: 0;
+  transition: all .3s;
+  background-color: inherit;
+}
+
+.bar::before { top: 14px; }
+.bar::after { top: 28px; }
+
+.menu-toggle:hover .bar {
+  transform: translateY(14px) rotate(45deg) scale(1.1);
+}
+
+.menu-toggle:hover .bar::before { top: 100px; }
+
+.menu-toggle:hover .bar::after {
+  top: 0;
+  transform: rotate(-90deg);
+}
+
+/* menu toggle end */
+
+nav {
+  background: linear-gradient(to right, var(--clr-blue2), var(--clr-blue5), var(--clr-blue2));
+}
+
+nav ul {
+  display: flex;
+}
+
+nav li {
+  padding: 4px 0 6px;
+  transition: all .3s;
+}
+nav li:hover {
+  background-color: var(--clr-blue1);
+}
+
+nav li a {
+  padding: 0 11px;
+  color: var(--clr-white);
+  font-size: 11px;
+  border-right: 1px solid var(--clr-blue1);
+}
+
+nav li:last-child a {
+  border-right: none;
+}
 
 /*=================================
   Header styling ends here
