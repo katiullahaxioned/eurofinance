@@ -147,6 +147,46 @@ button {
   text-transform: capitalize;
 }
 
+.section-subtitle {
+  color: var(--clr-blue6);
+  font-size: 11px;
+}
+
+.section-heading a {
+  color: var(--clr-blue4);
+  font-size: 15px;
+}
+
+.section-heading a:hover {
+  color: var(--clr-blue6);
+}
+
+.section-date {
+  color: var(--clr-grey);
+  font-size: 11px;
+}
+
+.section-para {
+  color: var(--clr-blue7);
+  font-size: 10px;
+}
+
+.button {
+  padding: 8px 35px;
+  border-radius: 2px;
+  background-color: var(--clr-blue2);
+  color: var(--clr-white);
+  font-size: 11px;
+}
+
+.button:hover {
+  background-color: var(--clr-blue6);
+}
+
+p {
+  line-height: 1.5;
+}
+
 /*for wrapper*/
 .wrapper {
   max-width: 1360px;
@@ -260,19 +300,28 @@ nav li {
   transition: all .3s;
 }
 nav li:hover {
-  background-color: var(--clr-blue1);
+  background-color: var(--clr-blue2);
+}
+
+nav li:nth-child(2){
+  background-color: var(--clr-blue2);
 }
 
 nav li a {
   padding: 0 11px;
   color: var(--clr-white);
   font-size: 11px;
-  border-right: 1px solid var(--clr-blue1);
+  border-right: 1px solid var(--clr-blue2);
 }
 
 nav li:last-child a {
   border-right: none;
 }
+
+nav a[title="Treasury Network"] {
+  text-transform: capitalize;
+}
+
 
 /*=================================
   Header styling ends here
@@ -282,12 +331,31 @@ nav li:last-child a {
   main styling starts here
 =================================*/
 
+main .wrapper {
+  padding: 24px 0 27px;
+  display: flex;
+  justify-content: space-between;
+}
 
+/* main content section starts here */
 
+/* banking relationship section starts here */
 
+main .main-content {
+  flex-basis: 72%;
+}
 
+/* banking relationship section ends here */
 
+/* main content section ends here */
 
+/* aside content section starts here */
+
+main aside {
+  flex-basis: 26.3%;
+}
+
+/* aside content section ends here */
 
 /*=================================
   main styling ends here
