@@ -649,11 +649,163 @@ aside .most-viewed {
   footer styling starts here
 =================================*/ 
 
+/* footer-top section starts here */
 
+footer,
+footer a {
+  color: var(--clr-white);
+}
 
+.footer-top {
+  background: linear-gradient(to right, var(--clr-blue5), var(--clr-blue6));
+}
 
+.footer-top .wrapper {
+  padding: 38px 0 56px;
+  display: flex;
+}
 
+.footer-top .footer-logo {
+  flex-basis: 34%;
+}
+.footer-top .footer-menu {
+  flex-basis: 33.8%;
+}
+.footer-top .footer-social {
+  flex-basis: 32.2%;
+}
 
+.footer-top h4 {
+  font-size: 13px;
+}
+
+.footer-logo h2 a {
+  padding: 0 26px 12px 0;
+  border-bottom: 1px solid var(--clr-blue4);
+}
+
+.footer-logo .economist-group {
+  padding: 3px 0;
+}
+
+.economist-group span,
+.economist-group a {
+  font-size: 11px;
+}
+
+.economist-group a {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+footer a:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+}
+
+.footer-top .footer-menu,
+.footer-top .footer-social {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transform: translateY(18px);
+}
+
+.footer-menu li {
+  display: block;
+}
+
+.footer-menu li a {
+  font-size: 11px;
+}
+
+.footer-social ul {
+  display: flex;
+  gap: 11px;
+}
+
+.footer-social li a {
+  position: relative;
+  text-indent: -99999px;
+  width: 30px;
+  height: 30px;
+  background-color: var(--clr-white);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.footer-social li a::before {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'fontAwesome';
+  text-indent: 0;
+}
+
+.footer-social li:nth-child(1) a::before {
+  content: '\f0e1';
+  color: var(--clr-linkedin);
+  font-size: 18px;
+}
+
+.footer-social li:nth-child(2) a::before {
+  content: '\f099';
+  color: var(--clr-twitter);
+  font-size: 20px;
+}
+
+.footer-social li:nth-child(3) a::before {
+  content: '\f04b';
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--clr-youtube);
+  font-size: 12px;
+}
+
+.footer-social li:nth-child(4) a::before {
+  content: '\f09a';
+  color: var(--clr-facebook);
+  font-size: 28px;
+}
+
+/* footer-top section ends here */
+
+/* footer-bottom section starts here */
+.footer-bottom {
+  background: linear-gradient(90deg, var(--clr-blue6), var(--clr-blue7));
+}
+
+.footer-bottom span,
+.footer-bottom a {
+  font-size: 9px;
+}
+
+.footer-bottom .wrapper {
+  padding: 5px 0 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-bottom .terms-privacy {
+  display: flex;
+}
+
+.footer-bottom .terms-privacy a {
+  padding: 2px 4px;
+  border-right: 1px solid var(--clr-white);
+}
+
+.footer-bottom .terms-privacy a:first-child {
+  padding-left: 0;
+}
+
+.footer-bottom .terms-privacy a:last-child {
+  border-right: none;
+}
+
+/* footer-bottom section ends here */
 
  /*=================================
   footer styling ends here
