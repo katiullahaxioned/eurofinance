@@ -407,6 +407,7 @@ main .main-content {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+  z-index: -1;
 }
 
 .cash-investment article:nth-child(3n - 1)::before {
@@ -482,6 +483,26 @@ main .main-content {
 
 .must-see-slider li figure {
   margin-bottom: 12px;
+  position: relative;
+}
+
+.must-see-slider li figure::before {
+  content: '\f04b';
+  padding: 13px 14px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all .3s;
+  background-color: var(--clr-white);
+  color: var(--clr-black);
+  font-family: 'fontAwesome';
+  text-indent: 0;
+}
+
+.must-see-slider li figure:hover::before {
+  color: var(--clr-grey);
 }
 
 .must-see-slider .subtitle-content {
@@ -498,6 +519,50 @@ main .main-content {
 } 
 
 /* must see section ends here */
+
+/* technology section starts here */
+
+.technology .section-wrapper {
+  padding: 15px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.technology ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.technology li {
+  padding: 0 0 13px 0;
+  margin-bottom: 26px;
+  flex-basis: 29.5%;
+  position: relative;
+}
+
+.technology li:nth-child(3n - 1)::before,
+.technology li:nth-child(3n - 1)::after {
+  content: '';
+  width: 115%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.technology li:nth-child(3n - 1)::before {
+  border-left: 1px solid var(--clr-grey);
+}
+
+.technology li:nth-child(3n - 1)::after {
+  border-right: 1px solid var(--clr-grey);
+}
+
+/* technology section ends here */
 
 /* main content section ends here */
 
