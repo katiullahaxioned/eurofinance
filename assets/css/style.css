@@ -572,6 +572,35 @@ main aside {
   flex-basis: 26.3%;
 }
 
+aside .section-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+aside .sign-up-box {
+  padding: 13px;
+  background: linear-gradient(30deg, var(--clr-blue6) 40%, var(--clr-blue1));
+}
+
+.sign-up-box .section-heading {
+  margin-bottom: 11px;
+  color: var(--clr-white);
+  font-size: 17px;
+}
+
+.sign-up-box .button {
+  width: 100%;
+  padding: 8px 0;
+  background-color: var(--clr-blue1);
+  font-size: 12px;
+  text-align: center;
+}
+
+.sign-up-box .button:hover {
+  background-color: var(--clr-blue3);
+}
+
 /* aside content section ends here */
 
 /*=================================
