@@ -154,7 +154,7 @@ button {
 
 .section-heading {
   color: var(--clr-blue4);
-  font-size: 20px;
+  font-size: 21px;
 }
 
 .section-heading a {
@@ -373,7 +373,7 @@ main .main-content {
 
 .banking-relationship-content a {
   color: var(--clr-blue4);
-  font-size: 20px;
+  font-size: 21px;
   text-transform: capitalize;
 }
 
@@ -422,6 +422,82 @@ main .main-content {
 }
 
 /* cash & investment section ends here */
+
+/* must see section starts here */
+
+.must-see .section-wrapper {
+  padding: 17px 0;
+  border-bottom: 1px solid var(--clr-grey);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.must-see .must-see-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.must-see-slider .control {
+  flex-basis: 2.5%;
+  position: relative;
+  font-size: 30px;
+  text-indent: -99999px;
+  cursor: pointer;
+}
+
+.must-see-slider .control:hover::before {
+  color: var(--clr-blue6);
+}
+
+.must-see-slider .control::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all .3s;
+  font-family: 'fontAwesome';
+  text-indent: 0;
+  color: var(--clr-grey);
+}
+
+.must-see-slider .prev::before {
+  content: '\f104';
+}
+
+.must-see-slider .next::before {
+  content: '\f105';
+}
+
+.must-see-slider .video-slider {
+  flex-basis: 95%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.must-see-slider li {
+  flex-basis: 31.8%;
+}
+
+.must-see-slider li figure {
+  margin-bottom: 12px;
+}
+
+.must-see-slider .subtitle-content {
+  display: flex;
+}
+
+.must-see-slider .section-subtitle,
+.must-see-slider .section-heading {
+  padding: 0 7px;
+} 
+
+.must-see-slider .section-subtitle:first-child {
+  border-right: 1px solid var(--clr-blue6);
+} 
+
+/* must see section ends here */
 
 /* main content section ends here */
 
