@@ -307,9 +307,9 @@ nav li:nth-child(2){
 
 nav li a {
   padding: 0 10px;
+  border-right: 1px solid var(--clr-blue1);
   color: var(--clr-white);
   font-size: 12px;
-  border-right: 1px solid var(--clr-blue1);
 }
 
 nav li:last-child a {
@@ -349,9 +349,9 @@ main .main-content {
 }
 
 .banking-relationship .section-wrapper {
+  border: 1px solid var(--clr-border);
   display: flex;
   justify-content: center;
-  border: 1px solid var(--clr-border);
 }
 
 .banking-relationship-content {
@@ -431,20 +431,20 @@ main .main-content {
 .must-see-slider .control {
   flex-basis: 2.5%;
   position: relative;
+  cursor: pointer;
   font-size: 30px;
   text-indent: -99999px;
-  cursor: pointer;
 }
 
 .must-see-slider .control::before {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  transition: all .3s;
+  color: var(--clr-grey);
   font-family: 'fontAwesome';
   text-indent: 0;
-  color: var(--clr-grey);
+  transform: translate(-50%, -50%);
+  transition: all .3s;
 }
 
 .must-see-slider .prev::before {
@@ -477,12 +477,12 @@ main .main-content {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  transition: all .3s;
   background-color: var(--clr-white);
   color: var(--clr-black);
   font-family: 'fontAwesome';
   text-indent: 0;
+  transform: translate(-50%, -50%);
+  transition: all .3s;
 }
 
 .must-see-slider .subtitle-content {
@@ -505,8 +505,8 @@ main .main-content {
 .technology .section-wrapper {
   padding: 15px 0 0;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
 }
 
 .technology ul {
@@ -530,8 +530,8 @@ main .main-content {
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translateX(-50%);
   z-index: -1;
+  transform: translateX(-50%);
 }
 
 .technology li:nth-child(3n - 1)::before {
@@ -828,7 +828,7 @@ footer a {
   /*for wrapper*/
 
   .wrapper {
-    width: 96%; 
+    width: 90%; 
   }
 
   /* for all starts here */
@@ -910,7 +910,7 @@ footer a {
 
   aside .sign-up-box,
   aside .most-viewed {
-    width: 70%;
+    width: 100%;
   }
 
   .most-viewed .section-subtitle {
@@ -936,7 +936,7 @@ footer a {
   .footer-top .footer-logo,
   .footer-top .footer-menu,
   .footer-top .footer-social {
-    width: 70%;
+    width: 100%;
     padding: 40px 0;
     border-bottom: 2px solid var(--clr-grey);
   }
@@ -982,6 +982,12 @@ footer a {
 
 /*media query for max-width: 767px starts here*/
 @media only screen and (max-width: 767px) {
+
+  /*for wrapper*/
+
+  .wrapper {
+    width: 96%; 
+  }
 
   /* Header styling starts here */
 
@@ -1159,25 +1165,20 @@ footer a {
   
   /* main content section ends here */
 
-  /* aside content section starts here */
-
-  aside .sign-up-box,
-  aside .most-viewed {
-    width: 100%;
-  }
-
-  /* aside content section ends here */
-
   /* main styling ends here */
 
-  /* footer styling starts here */
+  /* footer section starts here */
 
-  .footer-top .footer-logo,
-  .footer-top .footer-menu,
-  .footer-top .footer-social {
-    width: 100%;
+  .footer-bottom .terms-privacy {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
 
-  /* footer styling ends here */
+  .footer-bottom .terms-privacy a {
+    border-right: none;
+  }
+
+  /* footer section ends here */
 
 }
