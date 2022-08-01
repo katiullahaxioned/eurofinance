@@ -256,7 +256,7 @@ header {
   border-radius: 4px;
   position: relative;
   transition: all .3s;
-  background-color: var(--clr-blue7);
+  background-color: var(--clr-white);
   text-indent: -99999px;
 }
 
@@ -983,19 +983,201 @@ footer a {
 /*media query for max-width: 767px starts here*/
 @media only screen and (max-width: 767px) {
 
-} 
+  /* Header styling starts here */
 
-/*media query for max-width: 540px starts here*/
-@media only screen and (max-width: 540px) {
+  header {
+    padding: 0 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    z-index: 11;
+    position: sticky;
+    top: 0;
+    background: linear-gradient(to right, var(--clr-blue5), var(--clr-blue6));
+  }
 
-} 
+  .header-top {
+    flex-basis: 90%;
+    background: transparent;
+  }
 
-/*media query for max-width: 480px starts here*/
-@media only screen and (max-width: 480px) {
+  .header-top .wrapper {
+    width: 100%;
+  }
 
-} 
+  .header-top h1 {
+    flex-basis: 50%;
+  }
 
-/*media query for max-width: 320px starts here*/
-@media only screen and (max-width: 320px) {
+  .header-top .input-group input {
+    width: 130px;
+  }
 
-} 
+  .header-top .input-control input {
+    padding: 7px 7px 8px;
+  }
+
+  .menu-toggle {
+    display: block;
+    z-index: 10;
+  }
+
+  .menu-toggle:hover ~ nav {
+    left: 0;
+  }
+
+  nav {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    z-index: 8;
+    transition: all .3s;
+    background: linear-gradient(to right, var(--clr-blue5), var(--clr-blue6));
+  }
+
+  nav .wrapper {
+    width: 100%;
+    height: 100%;
+  }
+
+  nav ul {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  nav li {
+    padding: 0;
+  }
+
+  nav li a {
+    padding: 0;
+    font-size: 16px;
+    border-right: none;
+  }
+
+  /* Header styling ends here */
+
+  /* main styling starts here */
+
+  /* banking relationship section starts here */
+
+  .banking-relationship .section-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .banking-relationship-content {
+    padding: 12px;
+    flex-basis: 100%;
+  }
+
+  .banking-relationship figure {
+    flex-basis: 100%;
+  }
+
+  /* banking relationship section ends here */
+
+  /* cash & investment section starts here */
+
+  .cash-investment .section-wrapper {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cash-investment article {
+    flex-basis: 100%;
+    padding: 20px 0;
+  }
+
+  .cash-investment article:not(:last-child) {
+    border-bottom: 1px solid var(--clr-border);
+  }
+
+  .cash-investment article:nth-child(3n - 1)::before,
+  .cash-investment article:nth-child(3n - 1)::after {
+    width: 100%;
+    left: 0;
+    transform: translateX(0);
+  }
+
+  .cash-investment article:nth-child(3n - 1)::before {
+    border-left: none;
+  }
+
+  .cash-investment article:nth-child(3n - 1)::after {
+    border-right: none;
+  }
+
+  /* cash & investment section ends here */
+
+  /* must see section starts here */
+
+  .must-see-slider li {
+    flex: 1 0 100%;
+  }
+
+  .must-see-slider li:not(:first-child) {
+    display: none;
+  }
+
+  /* must see section ends here */
+
+  /* technology section starts here */
+  
+  .technology ul {
+    justify-content: center;
+  }
+  
+  .technology li {
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid var(--clr-border);
+    flex-basis: 100%;
+  }
+  
+  .technology li:nth-child(3n - 1)::before,
+  .technology li:nth-child(3n - 1)::after {
+    width: 100%;
+    left: 0;
+    transform: translateX(0);
+  }
+  
+  .technology li:nth-child(3n - 1)::before {
+    border-left: none;
+  }
+  
+  .technology li:nth-child(3n - 1)::after {
+    border-right: none;
+  }
+  
+  /* technology section ends here */
+  
+  /* main content section ends here */
+
+  /* aside content section starts here */
+
+  aside .sign-up-box,
+  aside .most-viewed {
+    width: 100%;
+  }
+
+  /* aside content section ends here */
+
+  /* main styling ends here */
+
+  /* footer styling starts here */
+
+  .footer-top .footer-logo,
+  .footer-top .footer-menu,
+  .footer-top .footer-social {
+    width: 100%;
+  }
+
+  /* footer styling ends here */
+
+}
